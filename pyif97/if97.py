@@ -6,6 +6,10 @@ rootPath=os.path.dirname(os.path.abspath( __file__ ))
 lib =  cdll.LoadLibrary(os.path.join(rootPath,"SteamTable_IF97.so"))
 
 #arguments type and result type
+#version
+lib.IF97_version.restype=c_char_p
+lib.IF97_version.argtypes=[]
+
 #pt
 lib.IF97_pt2g.restype=c_double
 lib.IF97_pt2g.argtypes=[c_double,c_double]
@@ -257,6 +261,9 @@ lib.IF97_SATgt2k.argtypes=[c_double]
 
 
 #def
+#version
+def version():
+  return lib.IF97_version()
 #pt
 def pt2g(p,t):
     return lib.IF97_pt2g(p,t)
