@@ -1,7 +1,0 @@
-setup.py
-pyif97/__init__.py
-pyif97/if97.py
-pyif97.egg-info/PKG-INFO
-pyif97.egg-info/SOURCES.txt
-pyif97.egg-info/dependency_links.txt
-pyif97.egg-info/top_level.txt
