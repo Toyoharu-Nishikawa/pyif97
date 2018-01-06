@@ -3,8 +3,7 @@ from ctypes import *
 
 rootPath=os.path.dirname(os.path.abspath( __file__ ))
 
-#lib =  cdll.LoadLibrary(os.path.join(rootPath,"SteamTable_IF97.so"))
-lib =  cdll.LoadLibrary("SteamTable_IF97.so"))
+lib =  cdll.LoadLibrary(os.path.join(rootPath,"SteamTable_IF97.so"))
 
 #arguments type and result type
 #version
