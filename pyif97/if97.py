@@ -263,7 +263,7 @@ lib.IF97_SATgt2k.argtypes=[c_double]
 #def
 #version
 def version():
-  return lib.IF97_version()
+  return lib.IF97_version().decode('utf8')
 #pt
 def pt2g(p,t):
     return lib.IF97_pt2g(p,t)
