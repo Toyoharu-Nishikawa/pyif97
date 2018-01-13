@@ -1,9 +1,15 @@
-import os.path
+import os
+import platform
 from ctypes import *
 
 rootPath=os.path.dirname(os.path.abspath( __file__ ))
 
-lib =  cdll.LoadLibrary(os.path.join(rootPath,"SteamTable_IF97.so"))
+if platform.system() =='Linux':
+    lib =  cdll.LoadLibrary(os.path.join(rootPath,"SteamTable_IF97.so"))
+elif platform.system() == 'Windows':
+    lib =  windll.LoadLibrary(os.path.join(rootPath,"SteamTable_IF97.dll"))
+else:
+    print("unsupported OS")
 
 #arguments type and result type
 #version
