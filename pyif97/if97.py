@@ -1,6 +1,7 @@
 import os
 import numpy as np
 from ctypes import *
+import warnings
 
 rootPath=os.path.dirname(os.path.abspath( __file__ ))
 
@@ -16,7 +17,7 @@ def _safe_set_types(lib, funcname, restype, argtypes):
        getattr(_lib, funcname).restype = restype
        getattr(_lib, funcname).argtypes = argtypes
     except AttributeError:
-       warnings.warm("&s is not defined." % funcname, ImportWarning, stacklevel=1)
+       warnings.warn("&s is not defined. % funcname", ImportWarning, stacklevel=1)
 
 
 #arguments type and result type
@@ -61,7 +62,8 @@ _safe_set_types(_lib, "IF97_ps2t", restype=c_double, argtypes=[c_double,c_double
 _safe_set_types(_lib, "IF97_ps2h", restype=c_double, argtypes=[c_double,c_double])
 _safe_set_types(_lib, "IF97_ps2w", restype=c_double, argtypes=[c_double,c_double])
 _safe_set_types(_lib, "IF97_ps2x", restype=c_double, argtypes=[c_double,c_double])
-_safe_set_types(_lib, "IF97_ps2x", restype=c_int, argtypes=[c_double,c_double])
+_safe_set_types(_lib, "IF97_ps2k", restype=c_double, argtypes=[c_double,c_double])
+_safe_set_types(_lib, "IF97_ps2MM", restype=c_int, argtypes=[c_double,c_double])
 
 
 #hs
