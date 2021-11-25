@@ -61,7 +61,8 @@ _safe_set_types(_lib, "IF97_ps2t", restype=c_double, argtypes=[c_double,c_double
 _safe_set_types(_lib, "IF97_ps2h", restype=c_double, argtypes=[c_double,c_double])
 _safe_set_types(_lib, "IF97_ps2w", restype=c_double, argtypes=[c_double,c_double])
 _safe_set_types(_lib, "IF97_ps2x", restype=c_double, argtypes=[c_double,c_double])
-_safe_set_types(_lib, "IF97_ps2x", restype=c_int, argtypes=[c_double,c_double])
+_safe_set_types(_lib, "IF97_ps2k", restype=c_double, argtypes=[c_double,c_double])
+_safe_set_types(_lib, "IF97_ps2MM", restype=c_int, argtypes=[c_double,c_double])
 
 
 #hs
